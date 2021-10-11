@@ -1,0 +1,18 @@
+.AdditionalServices {
+    width: 100%;
+    height: fit-content;
+    padding: 30px 50px;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.AdditionalServices h2 {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.ServiceList {
+    display: flex;
+    flex-wrap: wrap;
+}

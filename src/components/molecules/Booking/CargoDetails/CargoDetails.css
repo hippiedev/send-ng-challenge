@@ -1,0 +1,62 @@
+.CargoDetails {
+    width: 100%;
+    height: fit-content;
+    padding: 30px 50px;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.CargoDetails h2 {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.InfoWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+}
+.CargoType {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+}
+.CargoType span {
+    font-size: 14px;
+    margin-left: 10px;
+    padding-top: 2px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+.FormNav {
+    height: fit-content;
+    width: fit-content;
+    padding: 2px;
+    background: rgba(0, 0, 0, 0.089);
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    list-style: none;
+    border-radius: 6px;
+}
+.FormNavItem {
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.active {
+    background: #fff;
+    opacity: 1;
+    color: #0746a7;
+    cursor: pointer;
+}
+.FormInput {
+    width: 40%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -1,0 +1,20 @@
+.SelectService {
+    width: 100%;
+    height: fit-content;
+    padding: 30px 50px;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.SelectOptions {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.SelectService h2 {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 30px;
+}

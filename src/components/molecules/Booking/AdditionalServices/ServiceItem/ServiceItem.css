@@ -1,0 +1,27 @@
+.ServiceItem {
+    flex: 1 0 40%;
+    margin-bottom: 50px;
+}
+.ServiceItem:nth-child(3), .ServiceItem:nth-child(4) {
+    margin-bottom: 0;
+}
+
+.SwitchWrap {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+    top: -12px;
+}
+.ServiceInfo {
+    display: inline-block;
+    font-weight: 500;
+}
+.ServiceInfo h2 {
+    margin: 0;
+    text-transform: capitalize;
+}
+.ServiceInfo p {
+    padding-top: 5px;
+    font-size: 12px;
+    opacity: 0.65;
+}

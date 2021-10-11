@@ -1,0 +1,41 @@
+.SelectOption {
+    width: 22.5%;
+    height: 80px;
+    border-radius: 4px;
+    margin-right: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#Plane {
+    transform: rotate(270deg);
+    font-size: 70px;
+    float: right;
+    position: absolute;
+    left: 130px;
+    top: 25px;
+    color: #81868C;
+    z-index: 1;
+}
+#ServiceIcon {
+    font-size: 50px;
+    float: right;
+    position: absolute;
+    left: 140px;
+    top: 25px;
+    color: #81868C;
+    z-index: 1;
+}
+.OptionName {
+    display: block;
+    margin: auto;
+    margin-left: 20px;
+    color: #9b9b9b;
+    width: 100px;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    font-size: 14px;
+}

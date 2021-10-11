@@ -1,0 +1,47 @@
+.MaterialInputContainer {
+    height: fit-content;
+    width: 45%;
+    position: relative;
+}
+.MaterialInput {
+    background: #fff;
+    border: none;
+    font-family: 'Poppins';
+    height: 35px;
+    width: 100%;
+    padding: 10px;
+    padding-left: 15px;
+    font-size: 14px;
+    outline: 2px solid #d8d8d8;
+    border-radius: 2px;
+    color: #000;
+}
+.metric, .unit {
+    position: absolute;
+}
+.metric {
+    font-size: 12px;
+    background: #fff;
+    padding: 2px;
+    top: -12px;
+    left: 15px;
+    font-weight: 500;
+    z-index: 40;
+    text-transform: capitalize;
+    opacity: 0.98;
+}
+.unit {
+    height: 35px;
+    right: 0;
+    padding: 0px 15px;
+    vertical-align: middle;
+    color: #d8d8d8;
+    font-size: 14px;
+    z-index: 30;
+    background: #fff;
+}
+.unit span {
+    vertical-align: middle;
+    position: relative;
+    top: 6px;
+}

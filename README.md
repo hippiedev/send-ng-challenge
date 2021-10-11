@@ -1,70 +1,178 @@
-# Getting Started with Create React App
+# Preact Boilerplate / Starter Kit [![Build Status](https://travis-ci.org/developit/preact-boilerplate.svg?branch=master)](https://travis-ci.org/developit/preact-boilerplate) [![Preact Slack Community](https://preact-slack.now.sh/badge.svg)](https://preact-slack.now.sh)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+:guitar: Ready-to-rock [Preact] starter project, powered by [webpack]. **[(View Demo)](https://preact-boilerplate.surge.sh)**
 
-## Available Scripts
+> ### :rocket: Note: We now recommend [Preact CLI](https://github.com/developit/preact-cli/) for new projects.
+>
+> [Preact CLI](https://github.com/developit/preact-cli/) is a natural evolution of this boilerplate, and improves on it in every way. In a single dependency, you get a friendly command line project creation and build tool with development & production modes. Preact CLI requires _no configuration at all_, and even does **automatic code-splitting** without you lifting a finger!  It also produces bundles roughly half the size of preact-boilerplate.
 
-In the project directory, you can run:
+---
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Quick-Start Guide
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Installation](#installation)
+- [Development Workflow](#development-workflow)
+- [Structure](#structure)
+- [CSS Modules](#css-modules)
+- [Handling URLS](#handling-urls)
+- [React Compatibility](#react-compatibility)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+**1. Clone this repo:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+git clone --depth 1 https://github.com/developit/preact-boilerplate.git my-app
+cd my-app
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**2. Make it your own:**
 
-### `npm run eject`
+```sh
+rm -rf .git && git init && npm init
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> :information_source: This re-initializes the repo and sets up your NPM project.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**3. Install the dependencies:**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```sh
+npm install
+```
 
-## Learn More
+> You're done installing! Now let's get started developing.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Development Workflow
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+**4. Start a live-reload development server:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```sh
+npm run dev
+```
 
-### Making a Progressive Web App
+> This is a full web server nicely suited to your project. Any time you make changes within the `src` directory, it will rebuild and even refresh your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**5. Testing with `mocha`, `karma`, `chai`, `sinon` via `phantomjs`:**
 
-### Advanced Configuration
+```sh
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> 🌟 This also instruments the code in `src/` using [isparta](https://github.com/douglasduteil/isparta), giving you pretty code coverage statistics at the end of your tests! If you want to see detailed coverage information, a full HTML report is placed into `coverage/`.
 
-### Deployment
+**6. Generate a production build in `./build`:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```sh
+npm run build
+```
 
-### `npm run build` fails to minify
+> You can now deploy the contents of the `build` directory to production!
+>
+> **[Surge.sh](https://surge.sh) Example:** `surge ./build -d my-app.surge.sh`
+> 
+> **[Netlify](https://www.netlify.com/docs/cli/) Example:** `netlify deploy`
+>
+> [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/developit/preact-boilerplate)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+**5. Start local production server with [serve](https://github.com/zeit/serve):**
+
+```sh
+npm start
+```
+
+> This is to simulate a production (CDN) server with gzip. It just serves up the contents of `./build`.
+
+
+
+---
+
+
+## Structure
+
+Apps are built up from simple units of functionality called Components. A Component is responsible for rendering a small part of an application, given some input data called `props`, generally passed in as attributes in JSX. A component can be as simple as:
+
+```js
+class Link extends Component {
+  render({ to, children }) {
+    return <a href={ to }>{ children }</a>;
+  }
+}
+// usage:
+<Link to="/">Home</Link>
+```
+
+
+---
+
+
+## CSS Modules
+
+This project is set up to support [CSS Modules](https://github.com/css-modules/css-modules).  By default, styles in `src/style` are **global** (not using CSS Modules) to make global declarations, imports and helpers easy to declare.  Styles in `src/components` are loaded as CSS Modules via [Webpack's css-loader](https://github.com/webpack/css-loader#css-modules).  Modular CSS namespaces class names, and when imported into JavaScript returns a mapping of canonical (unmodified) CSS classes to their local (namespaced/suffixed) counterparts.
+
+When imported, this LESS/CSS:
+
+```css
+.redText { color:red; }
+.blueText { color:blue; }
+```
+
+... returns the following map:
+
+```js
+import styles from './style.css';
+console.log(styles);
+// {
+//   redText: 'redText_local_9gt72',
+//   blueText: 'blueText_local_9gt72'
+// }
+```
+
+Note that the suffix for local classNames is generated based on an md5 hash of the file. Changing the file changes the hash.
+
+
+---
+
+
+## Handling URLS
+
+:information_desk_person: This project contains a basic two-page app with [URL routing](http://git.io/preact-router).
+
+Pages are just regular components that get mounted when you navigate to a certain URL. Any URL parameters get passed to the component as `props`.
+
+Defining what component(s) to load for a given URL is easy and declarative. You can even mix-and-match URL parameters and normal props.
+
+```js
+<Router>
+  <A path="/" />
+  <B path="/b" id="42" />
+  <C path="/c/:id" />
+</Router>
+```
+
+
+---
+
+
+## React Compatibility
+
+This project includes [preact-compat] alias in as `react` and `react-dom` right out-of-the-box.  This means you can install and use third-party React components, and they will use Preact automatically!  It also means that if you _don't_ install third-party React components, `preact-compat` doesn't get included in your JavaScript bundle - it's free if you don't use it 👍
+
+---
+
+
+## License
+
+MIT
+
+
+[Preact]: https://github.com/developit/preact
+[preact-compat]: https://github.com/developit/preact-compat
+[webpack]: https://webpack.github.io

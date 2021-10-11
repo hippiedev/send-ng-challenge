@@ -1,0 +1,12 @@
+.Input {
+    background: rgba(0, 0, 0, 0.089);
+    border: none;
+    font-family: 'Poppins';
+    height: 35px;
+    width: 35%;
+    padding: 10px;
+    padding-left: 15px;
+    font-size: 14px;
+    outline: none;
+    color: #000;
+}

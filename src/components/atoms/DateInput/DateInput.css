@@ -1,0 +1,27 @@
+.DateInputContainer {
+    height: fit-content;
+    width: 35%;
+    margin-right: 20px;
+    position: relative;
+}
+.DateInput {
+    background: rgba(0, 0, 0, 0.089);
+    border: none;
+    font-family: 'Poppins';
+    height: 35px;
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px;
+    font-size: 14px;
+    outline: none;
+    color: #000;  
+}
+.planner {
+    position: absolute;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+}
+.planner img {
+    transform: scale(0.4);
+}

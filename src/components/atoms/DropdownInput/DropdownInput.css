@@ -1,0 +1,31 @@
+.DropdownInputContainer {
+    height: fit-content;
+    width: 35%;
+    margin-right: 20px;
+    position: relative;
+}
+
+.DropdownInput {
+    background: rgba(0, 0, 0, 0.089);
+    border: none;
+    font-family: 'Poppins';
+    height: 35px;
+    width: 100%;
+    padding: 10px;
+    padding-left: 15px;
+    font-size: 14px;
+    outline: none;
+    color: #000;
+}
+.caret {
+    position: absolute;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+#caretIcon {
+    transform: scale(0.5);
+}

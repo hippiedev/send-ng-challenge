@@ -1,0 +1,9 @@
+.Switch {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    vertical-align: middle;
+}
+.react-switch {
+    vertical-align: middle;
+}

@@ -1,0 +1,10 @@
+.Button {
+    text-transform: capitalize;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    background: #5cc58b;
+    color: #fff;
+    font-family: 'Poppins';
+    cursor: pointer;
+}
