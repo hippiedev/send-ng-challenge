@@ -1,6 +1,6 @@
 # Send-ng / Code challenge
 
-
+## Preview [live](https://send-ng-challenge.netlify.app/)
 
 # Quick-Start Guide
 
@@ -9,8 +9,7 @@
 **1. Clone this repo:**
 
 ```sh
-git clone --depth 1 https://github.com/hippiedev/send-ng-challenge.git my-app
-cd my-app
+git clone https://github.com/hippiedev/send-ng-challenge.git my-app
 ```
 
 **3. Install the dependencies:**
@@ -68,5 +67,3 @@ npm start
 
 
 ---
-
-## Preview [live](https://send-ng-challenge.netlify.app/)
