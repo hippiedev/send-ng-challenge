@@ -6,6 +6,7 @@ import SelectService from "../molecules/Booking/SelectService/SelectService";
 import OrderDetails from "../molecules/Booking/OrderDetails/OrderDetails";
 import CargoDetails from "../molecules/Booking/CargoDetails/CargoDetails";
 import AdditionalServices from "../molecules/Booking/AdditionalServices/AdditionalServices";
+import mobile from "../../assets/icons/mobile.svg";
 
 const BookingForm = () => {
 	return (
@@ -23,6 +24,10 @@ const BookingForm = () => {
 				<OrderDetails />
 				<CargoDetails />
 				<AdditionalServices />
+			</main>
+			<main className={style.Mobile}>
+				<img src={mobile} alt="" />
+				<p>Can't display app. Please view on a PC</p>
 			</main>
 		</div>
 	);

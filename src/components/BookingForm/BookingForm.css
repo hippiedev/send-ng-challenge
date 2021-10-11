@@ -1,3 +1,6 @@
+.BookingForm {
+    display: block;
+}
 .FormContent {
     width: 70%;
     height: fit-content;
@@ -23,4 +26,40 @@
     color: #87888c;
     font-weight: normal;
     font-size: 14px;
+}
+.Mobile {
+    display: none;
+}
+@media(max-width: 1000px) {
+    .BookingForm {
+        display: none;
+    }
+    .FormContent {
+        display: none;
+    }
+    #goBack {
+        display: none;
+    }
+    .Mobile {
+        display: block;
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .Mobile img {
+        height: 250px;
+        width: 250px;
+        display: block;
+        margin: 0 auto;
+    }
+    .Mobile p {
+        font-weight: 500;
+        opacity: 0.8;
+        text-align: center;
+        padding-top: 10px;
+        font-size: 20px;
+    }
 }

@@ -1,4 +1,4 @@
-# Send.ng / Code challenge
+# Send-ng / Code challenge
 
 
 

@@ -28,3 +28,8 @@
     justify-content: space-between;
     width: 300px;
 }
+@media(max-width: 1000px) {
+    .Header {
+        display: none;
+    }
+}
